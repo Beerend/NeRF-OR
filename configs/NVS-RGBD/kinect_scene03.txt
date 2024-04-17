@@ -1,0 +1,63 @@
+# Experiment
+expname = NVS-RGBD_kinect_scene03
+dataset = NVS-RGBD
+render_only = False
+sample_only = False
+sample_step_size = 0.2
+plot_input_data = True
+
+# Data loading
+basedir = ./logs
+datadir = '/home/geratsbga1/SparseNeRF/datasets/NVS-RGBD'
+image_scale = 2.0
+scene = 3
+render_steps = 1
+jit_gpu = False
+
+# Model
+netwidth = 256
+netdepth = 3
+netwidth_fine = 256
+netdepth_fine = 3
+
+# Encoding parameters
+i_embed = 1
+hash_enc_4d = False
+i_embed_views = 2
+finest_res = 2048
+log2_hashmap_size_3D = 21
+
+# Training parameters
+lrate = 0.01
+lrate_decay = 0.1
+N_rand = 16384
+N_samples = 64
+N_importance = 64
+chunk = 32768
+netchunk = 65536
+use_viewdirs = True
+raw_noise_std = 1e0
+perturb = 1.0
+
+# Depth-supervision
+depth_supervision = True
+depth_alpha = 0.5
+depth_alpha_decay = 1.0
+huber_loss = False
+normalize_depth = False
+relative_loss = False
+depth_gradients = True
+grad_patch_size = 8
+grad_res_levels = 4
+depth_beta = 0.5
+depth_beta_decay = 1.0
+
+# Render parameters
+white_bkgd = False
+render_factor = 0
+
+# Frequency parameters
+i_testset = 50
+i_weights = 2000
+i_video = 2000
+N_iters = 2000

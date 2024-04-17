@@ -1,0 +1,72 @@
+# Experiment
+expname = take9_dyn_000-627_multi-gpu
+dataset = 4D-OR
+render_only = False
+sample_only = False
+sample_step_size = 0.2
+plot_input_data = False
+
+# Data loading
+basedir = ./logs
+datadir = '/home/geratsbga1/4D-OR'
+train_cams = [1, 2, 3, 4, 5, 6]
+#test_cams = [1]
+image_scale = 4.0
+take = 9
+scene_id_start = 0
+scene_id_end = 627
+scene_id_stride = 1
+render_path = spiral
+render_steps = 240
+jit_gpu = True
+
+# Model
+netwidth = 256
+netdepth = 3
+netwidth_fine = 256
+netdepth_fine = 3
+
+# Encoding parameters
+i_embed = 1
+hash_enc_4d = True
+i_embed_views = 2
+finest_res = 2048
+base_res_time = 16
+finest_res_time = 627
+log2_hashmap_size_3D = 21
+log2_hashmap_size_4D = 21
+
+# Training parameters
+lrate = 0.01
+lrate_decay = 0.1
+N_rand = 16384
+N_samples = 64
+N_importance = 64
+chunk = 32768
+netchunk = 65536
+use_viewdirs = True
+raw_noise_std = 1e0
+perturb = 1.0
+
+# Depth-supervision
+depth_supervision = True
+depth_alpha = 0.5
+depth_alpha_decay = 1.0
+huber_loss = False
+normalize_depth = False
+relative_loss = False
+depth_gradients = True
+grad_patch_size = 8
+grad_res_levels = 4
+depth_beta = 0.5
+depth_beta_decay = 1.0
+
+# Render parameters
+white_bkgd = False
+render_factor = 0
+
+# Frequency parameters
+i_testset = 10000
+i_weights = 20000
+i_video = 20000
+N_iters = 10000
