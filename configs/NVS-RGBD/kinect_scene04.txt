@@ -11,7 +11,7 @@ basedir = ./logs
 datadir = '/home/geratsbga1/SparseNeRF/datasets/NVS-RGBD'
 image_scale = 2.0
 scene = 4
-render_steps = 1
+render_steps = 120
 jit_gpu = False
 
 # Model
