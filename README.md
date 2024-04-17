@@ -15,6 +15,11 @@ Install PyTorch and LPIPS with pip:
 pip3 install torch==1.11.0+cu113 torchvision==0.12.0+cu113 -f https://download.pytorch.org/whl/cu113/torch_stable.html
 pip3 install lpips
 ```
+### Versions
+The code was developed and tested with the following versions:
+- Conda: 4.9.2
+- CUDA: 11.3
+- PyTorch: 1.11.0
 
 ### Marigold
 We used Marigold as depth estimator from RGB images. You can follow the instructions [here](https://github.com/prs-eth/Marigold) for an installation.
