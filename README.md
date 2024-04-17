@@ -1,4 +1,7 @@
 # NeRF-OR
+This repository contains the code for training and evaluating NeRF-OR. The method is created for sparse-view dataset (e.g., with as few as three training views) without the requirement that the training cameras are positioned close to each other. Although NeRF-OR is designed to work with challenging camera setups that are typical for operating room videos, the method is applicable to other sparse-view datasets as well. Key to the method's design is the supervision with time-of-flight sensor depth combined with dense depth maps created by a monocular depth estimator from RGB images. This means that the method requires RGB-D recordings.
+
+![Method overview](images/method_overview_small.png)
 
 ## ⚙️ Installation
 
