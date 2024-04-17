@@ -832,6 +832,8 @@ def train(rank, world_size):
     if args.plot_input_data:
         print('\n> Creating plots for debugging...')
         import matplotlib.pyplot as plt
+        if not os.path.exists('debug'):
+            os.makedirs('debug')
         for i, img in enumerate(images['train']):
             plt.imsave(f'debug/rgb_image_{i}_train.jpg', img)
         for i, img in enumerate(images['test']):

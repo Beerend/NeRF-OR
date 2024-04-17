@@ -4,7 +4,7 @@ dataset = NVS-RGBD
 render_only = False
 sample_only = False
 sample_step_size = 0.2
-plot_input_data = True
+plot_input_data = False
 
 # Data loading
 basedir = ./logs
